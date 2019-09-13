@@ -21,7 +21,8 @@ export default function(state = { packages: {}, currentPackage: {} }, action = {
                 packages: {
                     ...state.packages,
                     [action.package.name]: {
-                        ...action.package.dependencies
+                        name: action.package.name,
+                        dependencies: action.package.dependencies
                     }
                 }
             };
